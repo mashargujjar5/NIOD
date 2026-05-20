@@ -8,6 +8,7 @@ import NewFeaturedPage from './pages/NewFeaturedPage';
 import SetsCollectionsPage from './pages/SetsCollectionsPage';
 import SkincarePage from './pages/SkincarePage';
 import BlogPage from './pages/BlogPage';
+import LogoShowcase from './pages/LogoShowcase';
 import './App.css';
 
 function App() {
@@ -48,6 +49,10 @@ function App() {
 
   if (path === '/blog') {
     return <BlogPage />;
+  }
+
+  if (path === '/logo-showcase') {
+    return <LogoShowcase />;
   }
 
   return (

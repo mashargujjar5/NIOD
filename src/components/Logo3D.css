@@ -1,0 +1,257 @@
+/* Animated Bottle Logo Styles */
+
+/* SVG and Image smoothing */
+svg,
+img {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Smooth rendering */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hardware acceleration */
+div[style*="preserve-3d"] {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    will-change: transform;
+}
+
+/* ===== LIQUID ANIMATIONS ===== */
+
+/* Liquid Wave Animation */
+.liquid-wave-bottle {
+    animation: liquidWaveBottle 3s ease-in-out infinite;
+    transform-origin: 100px 170px;
+}
+
+@keyframes liquidWaveBottle {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.95);
+    }
+}
+
+/* Liquid Shine Animation */
+.liquid-shine-bottle {
+    animation: liquidShineBottle 2.5s ease-in-out infinite;
+}
+
+@keyframes liquidShineBottle {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* ===== DROPLET ANIMATIONS ===== */
+
+.droplet-1 {
+    animation: droplet1 2.8s ease-in-out infinite;
+}
+
+.droplet-2 {
+    animation: droplet2 2.8s ease-in-out infinite 0.2s;
+}
+
+.droplet-3 {
+    animation: droplet3 2.8s ease-in-out infinite 0.4s;
+}
+
+.droplet-4 {
+    animation: droplet4 2.8s ease-in-out infinite 0.6s;
+}
+
+.droplet-5 {
+    animation: droplet5 2.8s ease-in-out infinite 0.8s;
+}
+
+@keyframes droplet1 {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes droplet2 {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes droplet3 {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes droplet4 {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes droplet5 {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-25px);
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .liquid-wave-bottle,
+    .liquid-shine-bottle,
+    .droplet-1,
+    .droplet-2,
+    .droplet-3,
+    .droplet-4,
+    .droplet-5 {
+        animation: none !important;
+    }
+}
+
+/* Responsive sizing */
+@media (max-width: 640px) {
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/* High DPI support */
+@media (-webkit-min-device-pixel-ratio: 2) {
+    svg {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.25;
+        transform: scale(1.1);
+    }
+}
+
+/* 3D Bottle Glass Effect */
+.bottle-glass {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0));
+    box-shadow:
+        inset -2px -2px 5px rgba(0, 0, 0, 0.1),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+        0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Rotating effect */
+@keyframes rotate3d {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Hover states */
+.logo-3d-container:hover {
+    filter: drop-shadow(0 20px 40px rgba(217, 119, 6, 0.3));
+}
+
+/* Enhanced lighting for logo */
+.logo-light {
+    position: relative;
+}
+
+.logo-light::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%,
+            rgba(255, 255, 255, 0.8),
+            transparent 50%);
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+/* Reflection effect */
+.logo-reflection {
+    position: relative;
+}
+
+.logo-reflection::after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: inherit;
+    opacity: 0.1;
+    filter: blur(2px) flipY;
+}
