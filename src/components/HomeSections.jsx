@@ -12,31 +12,31 @@ import SocialSection from './SocialSection';
 
 const HomeSections = () => (
   <main>
-    <AnimatedSection>
+    <AnimatedSection direction="up">
       <HeroSection />
     </AnimatedSection>
-    <AnimatedSection>
+    <AnimatedSection direction="left">
       <BestsellersSection />
     </AnimatedSection>
-    <AnimatedSection>
+    <AnimatedSection direction="right">
       <RiceLipidsSection />
     </AnimatedSection>
-    <AnimatedSection>
+    <AnimatedSection direction="left">
       <ConsultationsSection />
     </AnimatedSection>
-    <AnimatedSection>
+    <AnimatedSection direction="right">
       <CommonConcernsSection />
     </AnimatedSection>
-    <AnimatedSection>
+    <AnimatedSection direction="left">
       <MemberBenefitsSection />
     </AnimatedSection>
-    <AnimatedSection>
+    <AnimatedSection direction="right">
       <SocialSection />
     </AnimatedSection>
-    <AnimatedSection>
+    <AnimatedSection direction="left">
       <ScientistsSection />
     </AnimatedSection>
-    <AnimatedSection>
+    <AnimatedSection direction="right">
       <Footer />
     </AnimatedSection>
     <ChatButton />

@@ -46,7 +46,7 @@ const skincareProducts = {
     action: 'Select Shade',
     underlined: false,
     image:
-      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw93c635dc/Images/products/The%20Ordinary/Colours/serum-foundation-21y.png?sw=640&sh=640&sm=fit',
+      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw60f28d4c/Images/products/The%20Ordinary/Colours/rdn-serum-foundation-31-y-30ml.png?sw=640&sh=640&sm=fit',
     imageClass: 'h-[74%] w-[74%]',
   },
   azelaic: {
@@ -101,7 +101,7 @@ const skincareProducts = {
     sizes: ['30ml', '100ml'],
     underlined: true,
     image:
-      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwa142d0e1/Images/products/The%20Ordinary/ord-nmf-beta-glucan-30ml.png?sw=640&sh=640&sm=fit',
+      'https://static.thcdn.com/productimg/original/15318625-7585284127622042.jpg',
     badge: 'https://theordinary.com/on/demandware.static/-/Library-Sites-DeciemSharedLibrary/default/dwf8fc4a19/awards/test-eczema-seal.png',
     badgeClass: 'left-6 bottom-4 h-[74px] w-[74px]',
   },
@@ -224,7 +224,7 @@ const CaretDown = () => (
 );
 
 const SkincareProductTile = ({ product }) => (
-  <article className="text-[#101010]">
+  <article className="w-full min-w-0 text-[#101010]">
     <div className="group relative flex aspect-square items-center justify-center overflow-hidden bg-[#f8f8f8]">
       {product.tag && (
         <span className="absolute left-3 top-3 z-10 rounded-[2px] bg-white px-[5px] py-[5px] text-[12px] font-medium leading-none tracking-[-0.04em]">
@@ -238,7 +238,7 @@ const SkincareProductTile = ({ product }) => (
       </button>
       <img className={`object-contain ${product.imageClass || 'h-[78%] w-[78%]'}`} src={product.image} alt={product.name} />
       {product.badge && <img className={`absolute object-contain ${product.badgeClass}`} src={product.badge} alt="" aria-hidden="true" />}
-      <button className="absolute inset-x-0 top-[43%] hidden h-[38px] items-center justify-center gap-[12px] bg-black text-[12px] font-bold tracking-[-0.035em] text-white underline underline-offset-2 group-hover:flex">
+      <button className="absolute inset-x-0 top-[43%] hidden h-[38px] items-center justify-center gap-[12px] bg-black text-[12px] font-bold tracking-[-0.035em] text-white underline underline-offset-2 lg:group-hover:flex">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z" />
           <circle cx="12" cy="12" r="2.4" />
@@ -279,7 +279,7 @@ const RecentlyViewedSection = () => (
   <section className="bg-white font-['Inter',sans-serif]">
     <div className="mx-auto max-w-[1192px] border-b border-[#d9d9d9] px-5 pb-[70px] pt-[47px] md:px-0">
       <h2 className="text-[29px] font-black leading-none tracking-[-0.065em] text-[#111827]">Recently Viewed</h2>
-      <div className="mt-[42px] grid grid-cols-1 gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-[42px] grid grid-cols-1 gap-x-10 gap-y-[64px] md:grid-cols-2 lg:grid-cols-4">
         <SkincareProductTile product={skincareProducts.glucoside} />
       </div>
     </div>
@@ -341,7 +341,7 @@ const SkincareListingSection = () => (
         <p className="pt-[11px] text-[13px] font-bold tracking-[-0.035em] text-[#666]">(82 Results )</p>
       </div>
 
-      <div className="grid grid-cols-1 gap-x-10 gap-y-[88px] pt-[28px] sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-x-10 gap-y-[64px] pt-[28px] md:grid-cols-2 lg:grid-cols-4">
         <SkincareProductTile product={skincareProducts.hyaluronic} />
         <SkincareProductTile product={skincareProducts.niacinamide} />
         <SkincarePromoTile />
@@ -370,13 +370,13 @@ const SkincarePage = () => (
   <div className="min-h-screen bg-white text-black">
     <Header />
     <main>
-      <AnimatedSection>
+      <AnimatedSection direction="up">
         <SkincareHero />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <ShopByStepSection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <SplitFeatureSection
           title="Our Firsts, Your Favourites."
           copy="Our original serums are the perfect place to start your regimen. Packed with versatile ingredients formulated to hydrate, brighten and reinforce the skin barrier, there's a reason they're a community favourite."
@@ -386,7 +386,7 @@ const SkincarePage = () => (
           imageSide="left"
         />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <SplitFeatureSection
           title="Ingredients by The Ordinary."
           copy="Ingredients isn't a book about our products - it's about what's inside them."
@@ -396,26 +396,26 @@ const SkincarePage = () => (
           imageSide="right"
         />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <CommonConcernsSection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <BestsellersSection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <SkincareListingSection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <RecentlyViewedSection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <OLibrarySection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <SocialSection cards={skincareSocialCards} />
       </AnimatedSection>
     </main>
-    <AnimatedSection>
+    <AnimatedSection direction="right">
       <Footer />
     </AnimatedSection>
     <ChatButton />

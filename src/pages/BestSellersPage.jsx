@@ -14,7 +14,7 @@ const categoryProducts = [
     price: '$30.40 CAD',
     sizes: ['15 mL'],
     image:
-      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw2c778671/Images/products/The%20Ordinary/ord-volufiline-92pct-pal-isoleucine-1pct-15ml.png?sw=640&sh=640&sm=fit',
+      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwcc943d10/Images/products/The%20Ordinary/ord-volufiline-92-pal-isoleucine-1-15ml.png?sw=640&sh=640&sm=fit',
   },
   {
     tag: 'O. Exclusive',
@@ -24,7 +24,7 @@ const categoryProducts = [
     price: '$8.20 CAD',
     sizes: ['30ml'],
     image:
-      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw93c635dc/Images/products/The%20Ordinary/Colours/serum-foundation-21y.png?sw=640&sh=640&sm=fit',
+      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw60f28d4c/Images/products/The%20Ordinary/Colours/rdn-serum-foundation-31-y-30ml.png?sw=640&sh=640&sm=fit',
     action: 'Select Shade',
   },
   {
@@ -65,7 +65,7 @@ const categoryProducts = [
     price: '$19.90 CAD',
     sizes: ['15ml'],
     image:
-      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwca4c305c/Images/products/The%20Ordinary/rdn-retinal-02pct-emulsion-15ml.png?sw=640&sh=640&sm=fit',
+      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwa863ca2c/Images/products/The%20Ordinary/ord-retinal-02-emulsion-15ml.png?sh=860&sm=fit&sw=860',
   },
   {
     tag: 'Bestseller',
@@ -211,7 +211,7 @@ const ProductTile = ({ product }) => (
           <path d="M19.5 5.6c-1.8-1.8-4.8-1.8-6.6 0L12 6.5l-.9-.9c-1.8-1.8-4.8-1.8-6.6 0s-1.8 4.8 0 6.6l.9.9L12 19.6l6.6-6.5.9-.9c1.8-1.8 1.8-4.8 0-6.6Z" />
         </svg>
       </button>
-      <img className="h-[78%] w-[78%] object-contain" src={product.image} alt={product.name} />
+      <img className={`object-contain ${product.imageClass || 'h-[78%] w-[78%]'}`} src={product.image} alt={product.name} />
       {product.badge && <img className={`absolute object-contain ${product.badgeClass}`} src={product.badge} alt="" aria-hidden="true" />}
       <button className="absolute inset-x-0 top-[43%] hidden h-[38px] items-center justify-center gap-[12px] bg-black text-[12px] font-bold tracking-[-0.035em] text-white underline underline-offset-2 group-hover:flex">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -254,7 +254,7 @@ const PromoCard = () => (
   <article className="bg-white lg:col-span-2">
     <img
       className="h-[272px] w-full object-cover object-[70%_center]"
-      src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dw6c6c6817/Images/products/The%20Ordinary/application/ord-caffeine-solution-5pct-egcg-application.jpg?sw=900&sh=430&sm=fit"
+      src="https://cdn.media.amplience.net/i/deciem/2026-02-06-D51239-ORD-Caffeine-Face-New-PLP-Desktop-Img?fmt=auto&$poi$&sm=aspect&w=1200&aspect=16:7"
       alt="Caffeine serum application"
     />
     <div className="border-l border-[#dddddd] px-[31px] pb-[44px] pt-[51px]">
@@ -351,7 +351,7 @@ const BestSellersPage = () => (
     <Header />
 
     <main>
-      <AnimatedSection>
+      <AnimatedSection direction="up">
         <section className="relative overflow-hidden bg-[#f8f8f8]">
           <div className="mx-auto grid min-h-[451px] max-w-[1192px] grid-cols-1 px-5 md:grid-cols-[45%_55%] md:px-0">
             <div className="relative z-10 pt-[29px]">
@@ -385,7 +385,7 @@ const BestSellersPage = () => (
         </section>
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <section className="mx-auto max-w-[1050px] px-5 pb-[92px] pt-[18px] md:px-0">
           <div className="sticky top-0 z-20 -mx-5 flex min-h-[68px] items-start justify-between border-b border-transparent bg-white px-5 pt-0 md:static md:mx-0 md:px-0">
             <div className="flex gap-[15px]">
@@ -393,7 +393,7 @@ const BestSellersPage = () => (
                 Filters
                 <CaretDown />
               </button>
-              <button className="flex h-[39px] min-w-[109px] items-center justify-center gap-[16px] border border-[#7d7d7d] px-[18px] text-[16px] font-medium tracking-[-0.055em]">
+              <button className="flex h-[50px] min-w-[109px] items-center justify-center gap-[16px] border border-[#7d7d7d] px-[18px] text-[16px] font-medium tracking-[-0.055em]">
                 Sort By
                 <CaretDown />
               </button>
@@ -420,15 +420,15 @@ const BestSellersPage = () => (
         </section>
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <OLibrarySection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <NewInnovativeSection />
       </AnimatedSection>
     </main>
 
-    <AnimatedSection>
+    <AnimatedSection direction="right">
       <Footer />
     </AnimatedSection>
     <ChatButton />

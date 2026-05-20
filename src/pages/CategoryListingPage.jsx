@@ -78,7 +78,7 @@ const CategoryListingPage = ({ hero, resultCount, products, children }) => (
     <Header />
 
     <main>
-      <AnimatedSection>
+      <AnimatedSection direction="up">
         <section className="relative min-h-[451px] overflow-hidden bg-[#ffe4a8]">
           <img className="absolute inset-0 h-full w-full object-cover object-center" src={hero.image} alt="" aria-hidden="true" />
           <div className="relative z-10 mx-auto max-w-[1192px] px-5 pt-[29px] md:px-0">
@@ -99,7 +99,7 @@ const CategoryListingPage = ({ hero, resultCount, products, children }) => (
         </section>
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <section className="mx-auto max-w-[1192px] px-5 pb-[92px] pt-[11px] md:px-0">
           <div className="sticky top-0 z-20 -mx-5 flex min-h-[87px] items-start justify-between bg-white px-5 pt-0 md:static md:mx-0 md:px-0">
             <div className="flex gap-[15px]">
@@ -123,10 +123,10 @@ const CategoryListingPage = ({ hero, resultCount, products, children }) => (
         </section>
       </AnimatedSection>
 
-      <AnimatedSection>{children}</AnimatedSection>
+      <AnimatedSection direction="right">{children}</AnimatedSection>
     </main>
 
-    <AnimatedSection>
+    <AnimatedSection direction="left">
       <Footer />
     </AnimatedSection>
     <ChatButton />

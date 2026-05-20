@@ -1,5 +1,5 @@
 const ProductCard = ({ product }) => (
-  <article className="min-w-[268px] flex-1 text-[#252525]">
+  <article className="w-full min-w-0 text-[#252525]">
     <div className="relative flex aspect-square items-center justify-center bg-[#f8f8f8]">
       <span className="absolute left-3 top-3 z-10 bg-white px-1 py-[3px] text-[13px] leading-none tracking-[-0.03em]">
         {product.tag}

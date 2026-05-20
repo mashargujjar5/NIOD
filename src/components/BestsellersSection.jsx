@@ -13,14 +13,14 @@ const BestsellersSection = () => (
       </div>
 
       <div className="relative">
-        <div className="flex gap-10 overflow-x-auto px-5 pb-1 md:grid md:grid-cols-4 md:overflow-visible md:px-0">
+        <div className="grid grid-cols-1 gap-x-10 gap-y-[64px] px-5 pb-1 sm:grid-cols-2 lg:grid-cols-4 lg:px-0">
           {products.map((product) => (
             <ProductCard key={product.name} product={product} />
           ))}
         </div>
         <button
           aria-label="Next products"
-          className="absolute right-3 top-[108px] hidden h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-[0_8px_22px_rgba(0,0,0,0.08)] md:flex"
+          className="absolute right-3 top-[108px] hidden h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-[0_8px_22px_rgba(0,0,0,0.08)] lg:flex"
         >
           <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
             <path d="m9 18 6-6-6-6" />

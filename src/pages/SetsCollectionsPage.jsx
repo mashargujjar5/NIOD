@@ -305,20 +305,20 @@ const SetsCollectionsPage = () => (
   <div className="min-h-screen bg-white text-black">
     <Header />
     <main>
-      <AnimatedSection>
+      <AnimatedSection direction="up">
         <SetsHero />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <ProductListing />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <OLibrarySection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <SetsGuide />
       </AnimatedSection>
     </main>
-    <AnimatedSection>
+    <AnimatedSection direction="right">
       <Footer />
     </AnimatedSection>
     <ChatButton />

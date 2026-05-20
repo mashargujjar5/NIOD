@@ -221,7 +221,7 @@ const BlogPage = ({
     <Header />
 
     <main>
-      <AnimatedSection>
+      <AnimatedSection direction="up">
         <section className="border-t border-[#e2e2e2] bg-white">
           <div className="mx-auto max-w-[1282px] px-5 pb-[19px] pt-[81px] md:px-8 lg:px-0 lg:pt-[82px]">
             <div className="grid gap-[54px] lg:grid-cols-[620px_461px] lg:justify-between">
@@ -267,7 +267,7 @@ const BlogPage = ({
         </section>
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <section className="bg-white">
           <div className="mx-auto max-w-[1282px] px-5 pb-[66px] pt-[84px] md:px-8 lg:px-0">
             <article className="grid min-h-[430px] gap-[42px] lg:grid-cols-[1fr_620px] lg:gap-[42px]">
@@ -295,12 +295,12 @@ const BlogPage = ({
         </section>
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <BlogBottomRoutes />
       </AnimatedSection>
     </main>
 
-    <AnimatedSection>
+    <AnimatedSection direction="left">
       <Footer />
     </AnimatedSection>
     <ChatButton />

@@ -148,7 +148,7 @@ const bodyHairProducts = [
     price: '$6.00 USD',
     sizes: ['30ml', '100ml'],
     image:
-      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwa142d0e1/Images/products/The%20Ordinary/ord-nmf-beta-glucan-30ml.png?sw=640&sh=640&sm=fit',
+      'https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwf7afd35c/Images/products/The%20Ordinary/ord-nmf-bg-30mL-packshot-Resized.png?sw=640&sh=640&sm=fit',
   },
 ];
 
@@ -209,14 +209,14 @@ const BodyHairHero = () => (
       </div>
 
       <div className="relative hidden md:block">
-        <div className="absolute bottom-0 left-[216px] h-[68px] w-[197px] bg-[#e7e7e7]" />
-        <div className="absolute bottom-0 right-[11px] h-[68px] w-[316px] bg-[#eeeeee]" />
-        <div className="absolute bottom-[82px] right-[31px] z-20 flex h-[235px] w-[238px] rotate-[-18deg] items-center justify-center bg-white shadow-[0_22px_42px_rgba(0,0,0,0.12)]">
+        <div className="absolute bottom-0 right-[316px] h-[68px] w-[76px] bg-[#e4e4e4]" />
+        <div className="absolute bottom-0 right-[1px] h-[68px] w-[316px] bg-[#eeeeee]" />
+        <div className="absolute bottom-[82px] right-[12px] z-20 flex h-[258px] w-[258px] rotate-[-18deg] items-center justify-center bg-white shadow-[0_22px_45px_rgba(0,0,0,0.12)]">
           <img
             src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwb40ccfe2/Images/products/The%20Ordinary/FY25-D41247-ORD-Web-PDP-Mlt-Pptd-Hair-1x1-EN-1.jpg?sw=640&sh=640&sm=fit"
             alt=""
             aria-hidden="true"
-            className="h-[164px] w-[132px] rotate-[18deg] object-contain"
+            className="h-[132px] w-[132px] rotate-[18deg] object-cover"
           />
         </div>
       </div>
@@ -337,23 +337,23 @@ const BodyHairPage = () => (
   <div className="min-h-screen bg-white text-black">
     <Header />
     <main>
-      <AnimatedSection>
+      <AnimatedSection direction="up">
         <BodyHairHero />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <ShopByCategory />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <ProductListing />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="left">
         <RecentlyViewedSection />
       </AnimatedSection>
-      <AnimatedSection>
+      <AnimatedSection direction="right">
         <OLibrarySection />
       </AnimatedSection>
     </main>
-    <AnimatedSection>
+    <AnimatedSection direction="left">
       <Footer />
     </AnimatedSection>
     <ChatButton />
