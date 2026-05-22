@@ -75,9 +75,9 @@ const Header = () => {
           </div>
         </div> */}
 
-        <div className="h-[70px] md:h-[90px] flex items-center">
-          <div className="w-full flex items-center justify-between md:justify-center px-4 md:px-0">
-            <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className="h-[70px] lg:h-[90px] flex items-center">
+          <div className="w-full flex items-center justify-between lg:justify-center px-4 lg:px-0">
+            <button className="lg:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? (
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
               ) : (
@@ -85,7 +85,7 @@ const Header = () => {
               )}
             </button>
 
-            <div className="hidden md:flex items-center justify-center gap-8 lg:gap-14">
+            <div className="hidden lg:flex items-center justify-center gap-6 xl:gap-14">
               <a
                 href="/category/best-sellers"
                 className={`border-b-4 pb-[27px] pt-[31px] text-[15px] font-bold tracking-tight transition-opacity hover:opacity-50 lg:text-[17px] ${isBestSellers ? 'border-black' : 'border-transparent'}`}
@@ -124,14 +124,14 @@ const Header = () => {
               </a>
             </div>
 
-            <button className="md:ml-10 border border-black rounded-full px-6 md:px-10 py-2.5 md:py-4 text-[14px] md:text-[16px] font-bold hover:bg-black hover:text-white transition-all duration-300 whitespace-nowrap">
+            <button className="lg:ml-10 border border-black rounded-full px-6 lg:px-10 py-2.5 lg:py-4 text-[14px] lg:text-[16px] font-bold hover:bg-black hover:text-white transition-all duration-300 whitespace-nowrap">
               Build My Regimen
             </button>
           </div>
         </div>
 
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-2xl md:hidden py-6 flex flex-col items-center gap-5 animate-in slide-in-from-top duration-300">
+          <div className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-2xl lg:hidden py-6 flex flex-col items-center gap-5 animate-in slide-in-from-top duration-300">
             <a href="/category/best-sellers" className="text-[18px] font-bold tracking-tight py-2 w-full text-center hover:bg-gray-50">Bestsellers</a>
             <a href="/category/newfeatured" className="text-[18px] font-bold tracking-tight py-2 w-full text-center hover:bg-gray-50">New & Featured</a>
             <a href="/category/skincare" className="text-[18px] font-bold tracking-tight py-2 w-full text-center hover:bg-gray-50">Skincare</a>
